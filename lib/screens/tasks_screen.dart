@@ -30,7 +30,7 @@ class TasksScreen extends StatelessWidget {
                             color: Colors.yellow[900],
                           ),
                           backgroundColor: Colors.white,
-                          radius: 30.0,
+                          radius: 40.0,
                         ),
                         SizedBox(
                           width: 30.0,
@@ -72,9 +72,9 @@ class TasksScreen extends StatelessWidget {
             ],
           ),
           Positioned(
-            bottom: 50.0,
+            bottom: 60.0,
             left:
-                60.0, // Ajustez cette valeur pour ajuster la position à gauche
+                50.0, // Ajustez cette valeur pour ajuster la position à gauche
             child: FloatingActionButton(
               backgroundColor: Colors.grey[900],
               child: Icon(
