@@ -9,10 +9,13 @@ class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.grey[900],
       floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.lightBlueAccent,
-          child: Icon(Icons.add),
+          backgroundColor: Colors.grey[900],
+          child: Icon(
+            Icons.add,
+            color: Colors.yellow[800],
+          ),
           onPressed: () {
             showModalBottomSheet(
                 context: context,
@@ -35,9 +38,9 @@ class TasksScreen extends StatelessWidget {
               children: <Widget>[
                 CircleAvatar(
                   child: Icon(
-                    Icons.add_shopping_cart,
-                    size: 30.0,
-                    color: Colors.pinkAccent,
+                    Icons.checklist_rtl,
+                    size: 50.0,
+                    color: Colors.yellow[900],
                   ),
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -48,7 +51,7 @@ class TasksScreen extends StatelessWidget {
                 Text(
                   'Shopping List',
                   style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Colors.yellow[700],
                     fontSize: 50.0,
                     fontWeight: FontWeight.w700,
                   ),
@@ -56,7 +59,7 @@ class TasksScreen extends StatelessWidget {
                 Text(
                   '${Provider.of<TaskData>(context).taskCount} Purchases',
                   style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Colors.yellow[700],
                     fontSize: 20.0,
                   ),
                 ),
@@ -67,7 +70,7 @@ class TasksScreen extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
-                color: Colors.blue[100],
+                color: Colors.grey[300],
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20.0),
                   topRight: Radius.circular(20.0),

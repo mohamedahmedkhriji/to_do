@@ -17,7 +17,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
       child: Container(
         padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.grey[300],
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
@@ -31,7 +31,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30.0,
-                color: Colors.lightBlueAccent,
+                color: Colors.yellow[800],
               ),
             ),
             TextField(
@@ -43,19 +43,23 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 });
               },
             ),
-            TextButton(
-              child: Text(
-                'Add',
-                style: TextStyle(
-                  color: Colors.lightBlueAccent,
-                  fontSize: 40.0,
-                ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.grey, // Set button color to grey
               ),
               onPressed: () {
                 Provider.of<TaskData>(context, listen: false)
                     .addTask(newTaskTitle);
                 Navigator.pop(context);
               },
+              child: Text(
+                'Add',
+                style: TextStyle(
+                  color: Colors.white, // Set text color to white
+                  fontSize: 20.0, // Increase font size
+                  fontWeight: FontWeight.bold, // Make text bold
+                ),
+              ),
             ),
           ],
         ),
