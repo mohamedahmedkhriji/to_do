@@ -31,7 +31,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30.0,
-                color: Colors.yellow[800],
+                color: Colors.grey[900],
               ),
             ),
             TextField(
@@ -42,6 +42,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                   newTaskTitle = newText; // Update the state when text changes
                 });
               },
+            ),
+            SizedBox(
+              height: 10.0,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
